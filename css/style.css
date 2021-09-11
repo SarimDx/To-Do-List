@@ -31,14 +31,14 @@ form button {
   background: white;
 }
 form button {
-  color: #eb947c;
+  color: #ff6f47;
   background-color: white;
   cursor: pointer;
   transition: 0.5s;
 }
 form button:hover {
   color: white;
-  background-color: #eb947c;
+  background-color: #ff6f47;
 }
 .todo-container {
   display: flex;
@@ -85,4 +85,46 @@ form button:hover {
 .fall {
   transform: translateY(120px) rotateZ(20deg);
   opacity: 0%;
+}
+/* ? CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+/* ? Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 12rem;
+  padding: 1rem;
+}
+/* ? Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #ff6f47;
+  color: #ffffff;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.select:hover::after {
+  background-color: #ffffff;
+  color: #ff6f47;
 }
